@@ -17,3 +17,15 @@
 // };
 
 // console.log(range(10, 1, -1))
+
+// EXERCISE 2: reversing an array
+
+function reverseArray(arr) {
+    let reversedArray = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        reversedArray.push(arr[i]);
+    };
+    return reversedArray;
+};
+
+console.log(reverseArray(["A", "b", "c"]))
