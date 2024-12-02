@@ -1,8 +1,8 @@
     // EXERCIE 1: the sum of a range
 
-function range(start, end) {
+function range(start, end, step=1) {
     result = [];
-    for (let counter = start; counter <= end; counter++) {
+    for (let counter = start; start < end ? counter <= end : counter >= end; counter += Math.round(step)) {
         result.push(counter);
     };
     return result;
@@ -16,4 +16,4 @@ function sum(arr) {
     return result;
 };
 
-console.log(sum(range(1, 8)))
+console.log(range(10, 1, -1))
