@@ -62,3 +62,13 @@ function prepend(element, list) {
 
 // console.log(prepend(10, prepend(20, null)));
 
+function nth(list, position) {
+    let currentList = list;
+    for (let counter = 0; counter < position; counter++) {
+        currentList = currentList["rest"];
+    };
+    return currentList["value"];
+};
+
+// console.log(nth(arrayToList([10, 20, 30]), 2));
+
