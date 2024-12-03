@@ -20,26 +20,38 @@
 
 // EXERCISE 2: reversing an array
 
-function reverseArray(arr) {
-    let reversedArray = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        reversedArray.push(arr[i]);
+// function reverseArray(arr) {
+//     let reversedArray = [];
+//     for (let i = arr.length - 1; i >= 0; i--) {
+//         reversedArray.push(arr[i]);
+//     };
+//     return reversedArray;
+// };
+
+// console.log(reverseArray(["A", "b", "c", "t", "JJJ"]))
+
+// function reverseArrayInPlace(arr) {
+//     let tempVal;
+//     for (let i = 0; i < Math.round(arr.length/2); i++) {
+//         tempVal = arr[i];
+//         arr[i] = arr[arr.length - 1 - i];
+//         arr[arr.length - 1 - i] = tempVal;
+//     };
+//     return arr;
+// };
+
+// let arrayValue = ["A", "b", "c", "t", "JJJ"];
+
+// console.log(reverseArrayInPlace(arrayValue))
+
+// EXERCISE 3: a list
+
+function arrayToList(arr) {
+    if (arr.length == 0) {
+        return null;
+    } else {
+        return {value: arr.shift(), rest: arrayToList(arr)};
     };
-    return reversedArray;
 };
 
-console.log(reverseArray(["A", "b", "c", "t", "JJJ"]))
-
-function reverseArrayInPlace(arr) {
-    let tempVal;
-    for (let i = 0; i < Math.round(arr.length/2); i++) {
-        tempVal = arr[i];
-        arr[i] = arr[arr.length - 1 - i];
-        arr[arr.length - 1 - i] = tempVal;
-    };
-    return arr;
-};
-
-let arrayValue = ["A", "b", "c", "t", "JJJ"];
-
-console.log(reverseArrayInPlace(arrayValue))
+console.log(arrayToList([1, 2, 3]))
