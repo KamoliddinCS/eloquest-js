@@ -28,4 +28,18 @@ function reverseArray(arr) {
     return reversedArray;
 };
 
-console.log(reverseArray(["A", "b", "c"]))
+console.log(reverseArray(["A", "b", "c", "t", "JJJ"]))
+
+function reverseArrayInPlace(arr) {
+    let tempVal;
+    for (let i = 0; i < Math.round(arr.length/2); i++) {
+        tempVal = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = tempVal;
+    };
+    return arr;
+};
+
+let arrayValue = ["A", "b", "c", "t", "JJJ"];
+
+console.log(reverseArrayInPlace(arrayValue))
