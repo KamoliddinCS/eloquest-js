@@ -46,43 +46,52 @@
 
 // EXERCISE 3: a list
 
-function arrayToList(arr) {
-    if (arr.length == 0) {
-        return null;
-    } else {
-        return {value: arr.shift(), rest: arrayToList(arr)};
-    };
-};
+// function arrayToList(arr) {
+//     if (arr.length == 0) {
+//         return null;
+//     } else {
+//         return {value: arr.shift(), rest: arrayToList(arr)};
+//     };
+// };
 
 // console.log(arrayToList([1, 2, 3]))
 
-function listToArray(list) {
-    let arr = [];
-    while (true) {
-        arr.push(list["value"]);
-        if (list["rest"] != null) {
-            list = list["rest"];
-        } else {
-            break;
-        };
-    };
-    return arr;
-};
+// function listToArray(list) {
+//     let arr = [];
+//     while (true) {
+//         arr.push(list["value"]);
+//         if (list["rest"] != null) {
+//             list = list["rest"];
+//         } else {
+//             break;
+//         };
+//     };
+//     return arr;
+// };
 
 // console.log(listToArray(arrayToList([1, 0, "f"])))
 
-function prepend(element, list) {
-    return {value: element, rest: list};
-};
+// function prepend(element, list) {
+//     return {value: element, rest: list};
+// };
 
 // console.log(prepend(10, prepend(20, null)));
 
-function nth(list, position) {
-    let currentList = list;
-    for (let counter = 0; counter < position; counter++) {
-        currentList = currentList["rest"];
-    };
-    return currentList["value"];
-};
+// function nth(list, position) {
+//     let currentList = list;
+//     for (let counter = 0; counter < position; counter++) {
+//         currentList = currentList["rest"];
+//     };
+//     return currentList["value"];
+// };
 
 // console.log(nth(arrayToList([10, 20, 30]), 2));
+
+// EXERCISE 4
+
+function deepEqual(obj1, obj2={}) {
+    return JSON.stringify(obj1) === JSON.stringify(obj2);
+};
+
+let obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
