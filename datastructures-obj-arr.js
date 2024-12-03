@@ -54,4 +54,11 @@ function arrayToList(arr) {
     };
 };
 
-console.log(arrayToList([1, 2, 3]))
+// console.log(arrayToList([1, 2, 3]))
+
+function prepend(element, list) {
+    return {value: element, rest: list};
+};
+
+// console.log(prepend(10, prepend(20, null)));
+
