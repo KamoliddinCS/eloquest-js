@@ -56,6 +56,21 @@ function arrayToList(arr) {
 
 // console.log(arrayToList([1, 2, 3]))
 
+function listToArray(list) {
+    let arr = [];
+    while (true) {
+        arr.push(list["value"]);
+        if (list["rest"] != null) {
+            list = list["rest"];
+        } else {
+            break;
+        };
+    };
+    return arr;
+};
+
+// console.log(listToArray(arrayToList([1, 0, "f"])))
+
 function prepend(element, list) {
     return {value: element, rest: list};
 };
@@ -71,4 +86,3 @@ function nth(list, position) {
 };
 
 // console.log(nth(arrayToList([10, 20, 30]), 2));
-
