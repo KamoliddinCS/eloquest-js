@@ -6,3 +6,9 @@
 // The some method tests whether any element matches a given predicate function, while find finds the first element that matches a predicate.
 
 
+// EXERCISES 1: FLATTENING
+
+// let arrays = [[1, 2, 3], [4, 5], [6]];
+
+// console.log(arrays.reduce((arr, arr2) => arr.concat(arr2)))
+
