@@ -12,3 +12,12 @@
 
 // console.log(arrays.reduce((arr, arr2) => arr.concat(arr2)))
 
+// EXERCISE 2: LOOP
+
+function loop(value, test, update, execute) {
+    if (!test(value)) return;
+    execute(value);
+    return loop(update(value), test, update, execute)
+};
+
+loop(3, n => n > 0, n => n - 1, console.log);
