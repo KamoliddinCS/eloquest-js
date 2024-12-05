@@ -14,10 +14,26 @@
 
 // EXERCISE 2: LOOP
 
-function loop(value, test, update, execute) {
-    if (!test(value)) return;
-    execute(value);
-    return loop(update(value), test, update, execute)
+// function loop(value, test, update, execute) {
+//     if (!test(value)) return;
+//     execute(value);
+//     return loop(update(value), test, update, execute)
+// };
+
+// loop(3, n => n > 0, n => n - 1, console.log);
+
+// EXERCISE 3: EVERYTHING
+
+function every(array, test) {
+    for (let element of array) {
+        if (!test(element)) return false;
+    };
+    return true;
 };
 
-loop(3, n => n > 0, n => n - 1, console.log);
+console.log(every([1, 3, 5], n => n < 10));
+// → true
+console.log(every([2, 4, 10], n => n < 10));
+// → false
+console.log(every([], n => n < 10));
+// → true
