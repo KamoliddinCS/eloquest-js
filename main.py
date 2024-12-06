@@ -50,3 +50,16 @@
 #         result_string += "\n"
 
 # print(result_string)
+
+class Human:
+    def __init__(self, name, surname, age) -> None:
+        self.name = name
+        self.surname = surname
+        self.age = age
+
+    def introduce(self):
+        return f"Hi, I am {self.name} {self.surname}, and I am {self.age} years old! Glad to be alive!"
+    
+person = Human(name="Kamoliddin", surname="Yulbarsov", age=18)
+
+print(person.introduce())

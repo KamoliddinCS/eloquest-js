@@ -1186,4 +1186,7 @@ function dominantDirection(text) {
     return scripts.filter(({count}) => count == Math.max(...scripts.map(({count}) => count)))[0].name;
 }
 
-console.log(dominantDirection("Hey, مساء الخير"));
+// console.log(dominantDirection("Hey, مساء الخير"));
+
+let empty = {};
+console.log(empty.toString())
