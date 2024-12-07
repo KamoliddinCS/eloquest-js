@@ -10,3 +10,6 @@ class Car {
     }
 }
 
+let tesla = Car("Tesla", "Model X", "450 km/h");
+
+console.log(tesla.getCarInfo())
