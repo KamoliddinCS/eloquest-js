@@ -37,3 +37,9 @@
 
 // console.log(result)
 
+
+// EXPLORING THE POSSIBILITIES OF DOM API
+
+// changing the title of an html document using js
+
+let heading = document.getElementById("main-heading");

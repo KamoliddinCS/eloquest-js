@@ -51,6 +51,8 @@
 
 # print(result_string)
 
+from models import Product
+
 class Human:
     def __init__(self, name, surname, age) -> None:
         self.name = name
@@ -62,4 +64,8 @@ class Human:
     
 person = Human(name="Kamoliddin", surname="Yulbarsov", age=18)
 
-print(person.introduce())
+# print(person.introduce)
+
+new_product = Product("dyso", "Hair dryer", 2022, "Fanless drying")
+
+print(new_product.model_info)
