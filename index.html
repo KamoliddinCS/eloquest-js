@@ -4,10 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js"></script>
 </head>
 <body>
-    <h1 id="main-heading">Just working with console at this point. No need for any html for now.</h1>
-    <p>This is not the main heading</p>
+    <h1 id="main-heading">This is the primary text.</h1>
+    <h2 class="important">This is an h2 tag that describes a less stronger heading after <em class="highlight">h1 tag</em></h2>
+    <h2 class="important">This is another <em class="highlight">h2 tag</em></h2>
+
+    <ul id="word-list">
+        <li>The</li>
+        <li>Dog</li>
+        <li>Cat</li>
+        <li>Is</li>
+        <li>Was</li>
+        <li>And</li>
+        <li>Hungry</li>
+        <li>Green</li>
+    </ul>
+
+    <p id="sentence"></p>
+
+    <div id="box">HELLO</div>
+
+    <style>
+        #main-heading {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:aqua;
+        }
+
+        .important {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:rgb(212, 57, 0);
+        }
+
+        .highlight {
+            font-style: italic;
+            color:darkslateblue;
+        }
+
+        #word-list {
+            color:burlywood;
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 20px;
+        }
+
+        #word-list li {
+            cursor: pointer;
+            margin-top: 5px;
+            display: inline;
+        }
+
+        #word-list li:hover {
+            text-decoration: underline;
+        }
+
+        #sentence {
+            background-color:aliceblue;
+            border: 1px solid #00676e;
+            padding: 10px;
+            /* display: inline; */
+        }
+
+        #box {
+            display: none;
+            left: 0px;
+            top: 0px;
+            background-color: hotpink;
+            transition: 0.2s ease left, 0.2s ease top;
+        }
+
+    </style>
+
+    <script src="main.js"></script>
 </body>
 </html>
